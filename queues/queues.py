@@ -99,7 +99,7 @@ def calc_lq_mmc(lamda, mu, c=1):
     if not is_feasible(lamda, mu, c):
         return math.inf
 
-    # add arrival rates together if needed
+    # add arrival rates together if lamda is list or tuple
     if isinstance(lamda, (list, tuple)):
         lamda = sum(lamda)
 
